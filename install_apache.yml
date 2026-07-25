@@ -1,0 +1,13 @@
+---
+
+- hosts: all
+  become: true 
+  
+  
+  tasks:
+    - name: install apache2 package
+      ansible.builtin.dnf:
+        name: httpd
+        state: present
+
+
