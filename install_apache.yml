@@ -2,12 +2,17 @@
 
 - hosts: all
   become: true 
-  
-  
   tasks:
+
     - name: install apache2 package
       ansible.builtin.dnf:
         name: httpd
         state: present
+    
+    - name: install htop
+      ansible.builtin.dnf:
+        name: htop.x86_64
+        state: present
+
 
 
